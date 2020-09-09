@@ -1,0 +1,254 @@
+@font-face {
+  font-family: SF Pro Text Semibold;
+  src: url(Assets/fonts/sf-pro-display_semibold.woff2) format('woff2');
+}
+@font-face {
+  font-family: SF Pro Text;
+  src: url(Assets/fonts/sf-pro-display_regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: SF Pro Prolcons Regular;
+  src: url(Assets/fonts/SFProIcons_regular.woff) format('woff');
+}
+@font-face {
+  font-family: SF Pro Display;
+  src: url(Assets/fonts/sf-pro-text_regular.woff2) format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: SF Pro Display;
+  src: url(Assets/fonts/sf-pro-text_semibold.woff2) format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: SF Pro Display;
+  src: url(Assets/fonts/sf-pro-text_bold.woff2) format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: SF Pro Icons;
+  src: url(Assets/fonts/appleicons_text.woff) format('woff2');
+  font-weight: 600;
+}
+
+body {
+}
+
+h2 {
+  color: #1d1d1f;
+}
+
+.main .top-element {
+  text-align: center;
+}
+.main .top-element .headline {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.main .top-element .subline {
+  font-size: 110px;
+  line-height: .81838;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.macbook-pro {
+  margin-top: 250px;
+}
+
+@media (max-width: 767.98px) {
+  .main .top-element .headline {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 700;
+  }
+
+  .main .top-element .subline {
+    font-size: 48px;
+    line-height: .925;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .main .top-element .headline {
+    font-size: 24px;
+    line-height: 1.16667;
+  }
+
+  .main .top-element .subline {
+    font-size: 80px;
+    line-height: .925;
+  }
+ }
+
+@media (min-width: 992px) {  }
+
+.div-intro-img {
+  z-index: -999;
+  position: relative;
+}
+
+.div-intro-img {
+  max-width: 1096px;
+  width: 125vh;
+  min-width: 900px;
+  margin-top: -350px;
+}
+
+.bottom-element {
+  font-size: 36px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-top: 110px;
+  color: #888;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.main .bottom-element .a-tag {
+  font-size: 22px;
+  line-height: 1.18182;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  color: #000;
+}
+
+.section_intro_img_002 {
+  display: none;
+  width: 692px;
+  height: 460px;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767.98px) {
+  .main .bottom-element .paragraph {
+    font-size: 24px;
+    line-height: 1.16667;
+  }
+  .section_intro_img_001 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .main .bottom-element .paragraph {
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 600;
+    margin-top: -350px;
+  }
+  .div-intro-img {
+    margin-top: 300px;
+    margin-bottom: -500px;
+    padding-bottom: -3000px;
+  }
+  .section_intro_img_001 {
+    display: none;
+  }
+  .section_intro_img_002 {
+    display: inline;
+    margin-top: -250px;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .section_intro_img_002 {
+    display: inline;
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+    margin-top: 400px;
+    width: 352px;
+    height: 232px;
+    background-size: 352px 232px;
+  }
+  .main .bottom-element .paragraph {
+    margin-top: -850px;
+  }
+}
+
+@media (max-width: 577px) {
+  .section_intro_img_002 {
+    position: relative;
+    left: 25%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 501px) {
+  .section_intro_img_002 {
+    left: 20%;
+  }
+}
+
+.section.desc .desc .contents .main-p {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.desc .desc .contents .p {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: -.05em;
+  color: #888;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .section.desc .desc .contents .main-p {
+    font-size: 21px;
+    line-height: 1.09524;
+  }
+  
+  .section.desc .desc .contents .p {
+    width: 250px;
+    font-size: 21px;
+    line-height: 1.09524;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section.desc .desc .contents .main-p {
+    font-size: 24px;
+    line-height: 1.16667;
+  }
+  
+  .section.desc .desc .contents .p {
+    font-size: 24px;
+    line-height: 1.16667;
+    width: 250px;
+  }
+}
+
+.section.desc {
+  margin-top: 150px;
+}
+
+.video_turn {
+  margin-top: -480px;
+  margin-left: -230px;
+  z-index: -999;
+}
+
+.straight-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d2d2d7;
+  margin: 28px 0;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.section.desc {
+  width: 1000px;
+}
