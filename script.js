@@ -135,6 +135,7 @@ var images = [
     "Assets/images/sequence_images/large_0132.jpg",
     "Assets/images/sequence_images/large_0133.jpg",
   ];
+
 const intro = document.querySelector('.div-intro-img');
 var controller = new ScrollMagic.Controller(); // init controller
 // TweenMax can tween any property of any object. We use this object to cycle through the array
@@ -162,26 +163,13 @@ duration: 800
 .setPin(intro)
 .addTo(controller);
 
-
-function sizeAll() {
-    if ( window.innerWidth < 991.98) {
-    main_scene.enabled(false);
-    } else {
-    main_scene.enabled(true);
-    }
-}
-
-$(window).resize(sizeAll);
-sizeAll();
-
-
 // the animation to use
-const tl = gsap.timeline({ paused: true });
-tl.to(".component.main .top-element .box", { scale: 1, autoAlpha: 0 });
+const main_header = gsap.timeline({ paused: true });
+main_header.to(".component.main .top-element .box", { scale: 1, autoAlpha: 0 });
 
 // The start and end positions in terms of the page scroll
 const startY = innerHeight / 10;
-const finishDistance = innerHeight / 5;
+const finishDistance = innerHeight / 50;
 
 // Listen to the scroll event
 document.addEventListener("scroll", function () {
@@ -195,7 +183,7 @@ update();
 
 function update() {
   // Update our animation
-  tl.progress((scrollY - startY) / finishDistance);
+  main_header.progress((scrollY - startY) / finishDistance);
 
   // Let the scroll event fire again
   requestId = null;
@@ -203,17 +191,165 @@ function update() {
 
 
 // START FEATURE SECTION
-const feature = document.querySelector('.section.desc');
-const video = feature.querySelector('video');
+const video = document.querySelector('.section.desc').querySelector('video');
 
 // video scene
 const scene_feature = new ScrollMagic.Scene({
     duration: 100,
     triggerElement: video,
   })
-    .addIndicators({ name: "feature scene" })
+    .addIndicators({ name: "macbook video scene" })
     .addTo(controller)
     .on('enter', () => {
       video.play();
     })
   
+
+
+
+// feature row tween
+var tween_feature_row1 = TweenLite.from('#div-feature-row1 .main-p', 1, { css: { color: "white" }, ease: Back.easeOut });
+// build row scene
+var scene_feature_p = new ScrollMagic.Scene({
+  triggerElement: "#div-feature-row1",
+  duration: 200,
+})
+  .setTween(tween_feature_row1)
+  .addIndicators({ name: "tween css class" })
+  .addTo(controller);
+
+// feature row tween
+var tween_feature_row2 = TweenLite.from('#div-feature-row2 .main-p', 1, { css: { color: "white" }, ease: Back.easeOut });
+// build row scene
+var scene_feature_p = new ScrollMagic.Scene({
+  triggerElement: "#div-feature-row2",
+  duration: 200,
+})
+  .setTween(tween_feature_row2)
+  .addIndicators({ name: "tween css class" }) 
+  .addTo(controller);
+
+// feature row tween
+var tween_feature_row3 = TweenLite.from('#div-feature-row3 .main-p', 1, { css: { color: "white" }, ease: Back.easeOut });
+// build row scene
+var scene_feature_p = new ScrollMagic.Scene({
+  triggerElement: "#div-feature-row3",
+  duration: 200,
+})
+  .setTween(tween_feature_row3)
+  .addIndicators({ name: "tween css class" })
+  .addTo(controller);
+
+var tween_feature_row1_p = TweenLite.from('#div-feature-row1-p', 1, { css: { color: "white" }, ease: Back.easeOut });
+// build row scene
+var scene_feature_row1_p = new ScrollMagic.Scene({
+  triggerElement: "#div-feature-row1",
+  duration: 200,
+})
+  .setTween(tween_feature_row1_p)
+  .addIndicators({ name: "tween css class" }) 
+  .addTo(controller);
+  
+
+var tween_feature_row2_p = TweenLite.from('#div-feature-row2-p', 1, { css: { color: "white" }, ease: Back.easeOut });
+
+// build row scene
+var scene_feature_row2_p = new ScrollMagic.Scene({
+  triggerElement: "#div-feature-row2",
+  duration: 200,
+})
+  .setTween(tween_feature_row2_p)
+  .addIndicators({ name: "tween css class" }) 
+  .addTo(controller);
+
+var tween_feature_row3_p = TweenLite.from('#div-feature-row3-p', 1, { css: { color: "white" }, ease: Back.easeOut });
+
+// build row scene
+var scene_feature_row3_p = new ScrollMagic.Scene({
+  triggerElement: "#div-feature-row3",
+  duration: 200,
+})
+  .setTween(tween_feature_row3_p)
+  .addIndicators({ name: "tween css class" })
+  .addTo(controller);
+
+
+var retina_image1 = TweenLite.to('.section.retina .retina .images .image1',  1, {width:1900, height:1024});
+
+// build row scene
+var scene_retina_image1 = new ScrollMagic.Scene({
+  triggerElement: ".section.retina .retina .images .image1",
+  duration: 200,
+})
+  .setTween(retina_image1)
+  .addIndicators({ name: "tween css class" })
+  .addTo(controller);
+
+
+var scene_retina_p = new ScrollMagic.Scene({
+  triggerElement: ".section.retina .retina .images .image1",
+  triggerHook: 0.2, // show, when scrolled 50% into view
+  duration: "0%", // hide 10% before exiting view (80% + 10% from bottom)
+  offset: 50 // move trigger to center of element
+})
+  .setClassToggle(".section.retina .image-text-wrapper .info", "visible") // add class to reveal
+  .addIndicators({ name: "section retina text" }) // add indicators (requires plugin)
+  .addTo(controller);
+
+var image_controller = new ScrollMagic.Controller({
+  globalSceneOptions: {
+    triggerHook: 'onLeave',
+    duration: "100%" // this works just fine with duration 0 as well
+    // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+    // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+  }
+});
+
+// get all slides
+var slides = document.querySelectorAll(".section.retina .images");
+
+// create scene for every slide
+for (var i=0; i<slides.length; i++) {
+  new ScrollMagic.Scene({
+      triggerElement: slides[i],
+      duration: 0
+    })
+    .setPin(slides[i], {pushFollowers: false})
+    .addIndicators({ name: "Retina Second"}) // add indicators (requires plugin)
+    .addTo(image_controller);
+  }
+
+
+var retina_image2 = TweenLite.to('.section.retina .retina .images .figure', {scale: 0.5});
+
+// build row scene
+var scene_retina_image2 = new ScrollMagic.Scene({
+  triggerElement: "section.retina .stop",
+  duration: 300,
+})
+  .setTween(retina_image2)
+  .addIndicators({ name: "Retina image2" })
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: ".section.retina .retina .images .image-text-wrapper.second .figure .box",
+  triggerHook: 0.7, // show, when scrolled 10% into view
+  duration: "40%", // hide 10% before exiting view (80% + 10% from bottom)
+  offset: 50 // move trigger to center of element
+})
+.setClassToggle(".section.retina .retina .images .image-text-wrapper.second .figure .box", "visible") // add class to reveal
+.addIndicators({ name: "Burkard" })
+.addTo(controller);
+
+function sizeAll() {
+  if ( window.innerWidth < 991.98) {
+  main_scene.enabled(false);
+  } else {
+  main_scene.enabled(true);
+  }
+}
+
+$(window).resize(sizeAll);
+sizeAll();
+
+    

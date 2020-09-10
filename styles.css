@@ -94,9 +94,6 @@ h2 {
 }
 
 .div-intro-img {
-  max-width: 1096px;
-  width: 125vh;
-  min-width: 900px;
   margin-top: -350px;
 }
 
@@ -117,7 +114,13 @@ h2 {
   letter-spacing: -.05em;
   color: #000;
 }
-
+.main .bottom-element .a-tag:hover {
+  text-decoration: none;
+  color: #06c;
+}
+#Layer_1 {
+  margin-top: -5px;
+}
 .section_intro_img_002 {
   display: none;
   width: 692px;
@@ -154,7 +157,6 @@ h2 {
     display: inline;
     margin-top: -250px;
   }
-
 }
 
 @media (max-width: 767.98px) {
@@ -192,6 +194,7 @@ h2 {
   line-height: 1.16667;
   font-weight: 700;
   letter-spacing: -.05em;
+  margin-bottom: 3px;
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
@@ -204,20 +207,50 @@ h2 {
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) { 
+.section_retina_image {
+  width: 1068px;
+  height: 448px;
+  background-size: 1068px 448px;
+  background-repeat: no-repeat;
+  display: none;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section_retina_image {
+    display: inline;
+  }
+  .section.desc .component.desc .contents.row {
+    justify-content: space-around!important;
+  }
   .section.desc .desc .contents .main-p {
     font-size: 21px;
     line-height: 1.09524;
   }
-  
+
+  .video_turn {
+    display: none;
+  }
   .section.desc .desc .contents .p {
     width: 250px;
     font-size: 21px;
     line-height: 1.09524;
+  }
+  .component.desc {
+    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 767.98px) {
+  .section_retina_image {
+    width: 412px;
+    height: 188px;
+    background-size: 412px 188px;
+    background-repeat: no-repeat;
+    display: inline;
+  }
+
   .section.desc .desc .contents .main-p {
     font-size: 24px;
     line-height: 1.16667;
@@ -227,6 +260,13 @@ h2 {
     font-size: 24px;
     line-height: 1.16667;
     width: 250px;
+  }
+  .component.desc {
+    margin-bottom: 50px;
+    margin-top: -450px;
+  }
+  .video_turn {
+    display: none;
   }
 }
 
@@ -251,4 +291,298 @@ h2 {
 
 .section.desc {
   width: 1000px;
+}
+
+.section.retina {
+  margin-top: 200px;
+}
+.section.retina .contents.retina .top-element .headline {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  color: #acacac;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.retina .contents.retina .top-element .subline {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  color: #1d1d1f;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .section.retina .contents.retina .top-element .headline {
+    font-size: 64px;
+    line-height: 1.0625;
+  }
+  
+  .section.retina .contents.retina .top-element .subline {
+    font-size: 64px;
+    line-height: 1.0625;
+    letter-spacing: -.05em;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section.retina .contents.retina .top-element .headline {
+    font-size: 40px;
+    line-height: 1;
+  }
+  
+  .section.retina .contents.retina .top-element .subline {
+    font-size: 40px;
+    line-height: 1;
+  }
+}
+
+.section.retina .image1 {
+  width: 1000px;
+  height: 1024px;
+  background-size: 1000px 1024px;
+  background-repeat: no-repeat;
+  z-index: -2;
+  margin-top: 50px;
+  position: relative;
+}
+
+.section.retina .image-text-wrapper .info {
+  margin-top: 390px;
+  margin-left: 210px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+	-webkit-transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			-ms-transform: scale(0.9);
+				-o-transform: scale(0.9);
+					transform: scale(0.9);
+	-webkit-transition: all 1s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-ms-transition: all 1s ease-in-out;
+				-o-transition: all 1s ease-in-out;
+					transition: all 1s ease-in-out;
+}
+
+.section.retina .image-text-wrapper .info.visible {
+		opacity: 1;
+		-webkit-transform: none;
+			 -moz-transform: none;
+				-ms-transform: none;
+				 -o-transform: none;
+						transform: none;
+	}
+
+.section.retina .image-text-wrapper .info .name {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 700;
+  letter-spacing: -.022em;
+  margin-bottom: 0px;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.retina .image-text-wrapper .info .job {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.retina .image-text-wrapper.second {
+  position: relative;
+}
+
+.section.retina .image2 {
+  width: 2370px;
+  height: 1280px;
+}
+
+.section.retina .third {
+  margin-top: 700px;
+  font-size: 36px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: -.05em;
+  color: #888;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.image3 {
+  width: 1860px;
+  height: 1110px;
+  margin-top: -1400px;
+  margin-left: 260px;
+}
+
+.section.desc1 {
+  margin-top: 1000px;
+}
+
+.bold {
+  color: black;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section.retina .third {
+    font-size: 28px;
+    line-height: 1.14286;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section.retina .third {
+    font-size: 24px;
+    line-height: 1.16667;
+  }
+}
+
+.section.retina .images .image-text-wrapper.second .figure .box {
+  margin-top: 100px;
+  margin-left: 200px;
+  color: white;
+  z-index: 999;
+  position: absolute;
+}
+
+
+.section.retina .images .image-text-wrapper.second .figure .box .quote-text {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -.05em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.retina .images .image-text-wrapper.second .figure .box .quote-name {
+  font-size: 28px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: -.05em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.section.retina .retina .images .image-text-wrapper.second .figure .box {
+  margin-left: -10px;
+  margin-top: 290px;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+     -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+.section.retina .retina .images .image-text-wrapper.second .figure .box.visible {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.section.retina .retina .images .image-text-wrapper.second .figure .box.invisible {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+     -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+
+.section.retina .retina .gallery {
+  position: relative;
+  margin-top: 200px;
+  height: 800px;
+  width: 1100px;
+  background-color: #f3f3f3;
+    --image-gap: 65px;
+}
+.section.retina .retina .images-container .image.image-screen-0 {
+  opacity: 0.4;
+  position: absolute;
+  margin-left: -600px;
+  margin-top: 50px;
+  width: 310px;
+  height: 642px;
+  background-size: 310px 642px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/v/macbook-pro-16/b/images/overview/display_layers_1__d0b4n5xraqgm_large.png);
+}
+
+.section.retina .retina .images-container .image.image-screen-1 {
+  opacity: 0.4;
+  position: absolute;
+  margin-left: -530px;
+  margin-top: 50px;
+  width: 310px;
+  height: 642px;
+  background-size: 310px 642px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/v/macbook-pro-16/b/images/overview/display_layers_2__b9yckn8nb1ea_large.png);
+}
+
+.section.retina .retina .images-container .image.image-screen-2 {
+  opacity: 0.4;
+  position: absolute;
+  margin-left: -470px;
+  margin-top: 50px;
+  width: 310px;
+  height: 642px;
+  background-size: 310px 642px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/v/macbook-pro-16/b/images/overview/display_layers_3__e9rvwsnr1taq_large.png);
+}
+
+.section.retina .retina .images-container .image.image-screen-3 {
+  opacity: 0.4;
+  position: absolute;
+  margin-left: -400px;
+  margin-top: 50px;
+  width: 310px;
+  height: 642px;
+  background-size: 310px 642px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/v/macbook-pro-16/b/images/overview/display_layers_4__etyl3gxflzue_large.png);
+}
+
+.section.retina .retina .images-container .image.image-screen-4 {
+  opacity: 1;
+  position: absolute;
+  margin-left: -330px;
+  margin-top: 50px;
+  width: 310px;
+  height: 642px;
+  background-size: 310px 642px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/v/macbook-pro-16/b/images/overview/display_layers_5__cd3zgyjso70i_large.png);
+}
+
+.section.retina .contents.retina .images-container {
+  margin-left: 800px;
+}
+
+.section.retina .contents.retina .gallery.row .fourth .item-container .gallery-item {
+  margin-left: 60px;
+  margin-top: 330px;
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 500;
+  letter-spacing: -.05em;
+  color: #888;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
