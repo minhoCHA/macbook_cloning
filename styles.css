@@ -31,7 +31,9 @@
   font-weight: 600;
 }
 
-body {
+
+html, body {
+	height: 100%;
 }
 
 h2 {
@@ -295,6 +297,7 @@ h2 {
 
 .section.retina {
   margin-top: 200px;
+  margin-bottom: -1000px;
 }
 .section.retina .contents.retina .top-element .headline {
   font-size: 80px;
@@ -339,21 +342,37 @@ h2 {
   }
 }
 
-.section.retina .image1 {
-  width: 1000px;
-  height: 1024px;
-  background-size: 1000px 1024px;
-  background-repeat: no-repeat;
-  z-index: -2;
-  margin-top: 50px;
+.image1-wrapper {
   position: relative;
 }
 
-.section.retina .image-text-wrapper .info {
-  margin-top: 390px;
-  margin-left: 210px;
+.image1 {
+  width: 1600px;
+  height: 1024px;
+}
+.section-wiper .section.one .images.first {
+  width: 1600px;
+  height: 1024px;
+  background-repeat: no-repeat;
+  z-index: -2;
+  overflow: hidden;
   position: absolute;
-  z-index: -1;
+}
+
+.image1-cover {
+  z-index: -3;
+  background: #F2F2F2;
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.info {
+  margin-top: 390px;
+  margin-left: 300px;
+  position: absolute;
+  z-index: 999;
   opacity: 0;
 	-webkit-transform: scale(0.9);
 			-moz-transform: scale(0.9);
@@ -367,7 +386,7 @@ h2 {
 					transition: all 1s ease-in-out;
 }
 
-.section.retina .image-text-wrapper .info.visible {
+.info.visible {
 		opacity: 1;
 		-webkit-transform: none;
 			 -moz-transform: none;
@@ -376,7 +395,7 @@ h2 {
 						transform: none;
 	}
 
-.section.retina .image-text-wrapper .info .name {
+.info .name {
   font-size: 17px;
   line-height: 1.47059;
   font-weight: 700;
@@ -385,7 +404,7 @@ h2 {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-.section.retina .image-text-wrapper .info .job {
+.info .job {
   font-size: 17px;
   line-height: 1.47059;
   font-weight: 400;
@@ -393,16 +412,17 @@ h2 {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-.section.retina .image-text-wrapper.second {
+.sections-wiper .image-text-wrapper.second {
   position: relative;
+  margin-top: 948px;
 }
 
-.section.retina .image2 {
+.sections-wiper .image2 {
   width: 2370px;
   height: 1280px;
 }
 
-.section.retina .third {
+.section-wiper .third {
   margin-top: 700px;
   font-size: 36px;
   line-height: 1.16667;
@@ -415,8 +435,7 @@ h2 {
 .image3 {
   width: 1860px;
   height: 1110px;
-  margin-top: -1400px;
-  margin-left: 260px;
+  margin-top: -2510px;
 }
 
 .section.desc1 {
@@ -428,20 +447,20 @@ h2 {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .section.retina .third {
+  .section-wiper .third {
     font-size: 28px;
     line-height: 1.14286;
   }
 }
 
 @media (max-width: 767.98px) {
-  .section.retina .third {
+  .section-wiper .third {
     font-size: 24px;
     line-height: 1.16667;
   }
 }
 
-.section.retina .images .image-text-wrapper.second .figure .box {
+.section-wiper .image.two .wrapper .box {
   margin-top: 100px;
   margin-left: 200px;
   color: white;
@@ -450,7 +469,7 @@ h2 {
 }
 
 
-.section.retina .images .image-text-wrapper.second .figure .box .quote-text {
+.box-extra .quote-text {
   font-size: 80px;
   line-height: 1.05;
   font-weight: 700;
@@ -458,7 +477,7 @@ h2 {
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-.section.retina .images .image-text-wrapper.second .figure .box .quote-name {
+.box-extra .quote-name {
   font-size: 28px;
   line-height: 1.14286;
   font-weight: 600;
@@ -466,7 +485,7 @@ h2 {
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-.section.retina .retina .images .image-text-wrapper.second .figure .box {
+.box-extra {
   margin-left: -10px;
   margin-top: 290px;
   opacity: 0;
@@ -481,7 +500,7 @@ h2 {
        -o-transition: all 1s ease-in-out;
           transition: all 1s ease-in-out;
 }
-.section.retina .retina .images .image-text-wrapper.second .figure .box.visible {
+.box-extra.visible {
   opacity: 1;
   -webkit-transform: none;
      -moz-transform: none;
@@ -490,7 +509,7 @@ h2 {
           transform: none;
 }
 
-.section.retina .retina .images .image-text-wrapper.second .figure .box.invisible {
+.box-extra.invisible {
   opacity: 0;
   -webkit-transform: scale(0.9);
      -moz-transform: scale(0.9);
@@ -504,7 +523,7 @@ h2 {
           transition: all 1s ease-in-out;
 }
 
-.section.retina .retina .gallery {
+/* .section.retina .retina .gallery {
   position: relative;
   margin-top: 200px;
   height: 800px;
@@ -585,4 +604,59 @@ h2 {
   letter-spacing: -.05em;
   color: #888;
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+} */
+
+.sections-wiper {
+	width: 100%;
+  height: 100%;
+  margin-top: -500px;
+}
+
+.sections-wiper .section {
+	position: absolute;
+	width: 100%;
+  height: 100%;
+}
+
+.section.two {
+  height: 1800px;
+  background-repeat: no-repeat;
+}
+
+.figure .img.cover {
+  position: absolute;
+  opacity: 0.7;
+  background-color: black;
+  z-index: 999;
+  width: 2370px;
+  height: 1280px;
+}
+
+.section-wiper {
+  margin-top: 1100px;
+  overflow: hidden;
+}
+
+.section-wiper .wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.section-wiper .image {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.scrollmagic-pin-spacer-extra {
+  position: absolute !important;
+  clip: rect(auto, auto, auto, auto);
+}
+  
+.box-extra {
+  margin-top: -600px;
+  color: white;
+  z-index: 999;
+  position: absolute;
 }
