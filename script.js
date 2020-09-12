@@ -189,7 +189,6 @@ function update() {
   requestId = null;
 }
 
-
 // START FEATURE SECTION
 const video = document.querySelector('.section.desc').querySelector('video');
 
@@ -197,6 +196,7 @@ const video = document.querySelector('.section.desc').querySelector('video');
 const scene_feature = new ScrollMagic.Scene({
     duration: 100,
     triggerElement: video,
+    offset: 200
   })
     .addIndicators({ name: "macbook video scene" })
     .addTo(controller)
@@ -272,7 +272,8 @@ var scene_feature_row3_p = new ScrollMagic.Scene({
   .addTo(controller);
 
 
-var retina_image1 = TweenLite.to('.section-wiper .image1-cover',  1, {width:1900 });
+
+var retina_image1 = TweenLite.to('.section-wiper .image1-cover',  1, {width:2400 });
 
 // build row scene
 var scene_retina_image1 = new ScrollMagic.Scene({
@@ -307,27 +308,25 @@ function sizeAll() {
 $(window).resize(sizeAll);
 sizeAll();
 
-  
-// blue image tween
-var tween_blue_image = TweenLite.to('.figure .img.cover', 1, { backgroundColor:"transparent" });
 
-// build row scene
-var scene_feature_row3_p = new ScrollMagic.Scene({
-  triggerElement: ".figure",
-  duration: 50,
+new ScrollMagic.Scene({
+  triggerElement: ".image.two",
+  triggerHook: 0.3,
+  duration: 200,
 })
-  .setTween(tween_blue_image)
-  .addIndicators({ name: "grey to blue" })
+  .setClassToggle(".box-extra", "visible") // add class to reveal
+  .addIndicators({ name: "Burkard visible" })
   .addTo(controller);
 
-  /////////////////////////////////////////////// THIS PART NEEEDS TO BE FIXED 
-  new ScrollMagic.Scene({
-    triggerElement: ".box-extra",
-    triggerHook: 0.2, // show, when scrolled 10% into view
-  })
-  .setClassToggle(".box-extra", "visible") // add class to reveal
-  .addIndicators({ name: "Burkard" })
-  .addTo(controller);
+// new ScrollMagic.Scene({
+//   triggerElement: ".image.two",
+//   triggerHook: 0.2,
+//   duration: 100,
+//   offset: 400
+// })
+//   .setClassToggle(".box-extra", "invisible") // add class to reveal
+//   .addIndicators({ name: "Burkard invisible" })
+//   .addTo(controller);
   
 
 new ScrollMagic.Scene({
@@ -342,7 +341,7 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
 	triggerElement: ".image.two",
 	triggerHook: "onEnter",
-	duration: "200%"
+	duration: "100%"
 }).setPin(".section-wiper .image.two .wrapper",{
   pushFollowers: false,
   spacerClass: "scrollmagic-pin-spacer-extra"
@@ -384,3 +383,50 @@ new ScrollMagic.Scene({
 //   }
 
 
+var tween_smaller = TweenMax.to(".swiper-figure", 1, {scale:0.5});
+	
+var pinSceneIntro = new ScrollMagic.Scene({
+  triggerElement: '.third',
+  triggerHook: 'onEnter',
+  duration: '20%',
+})
+.setTween(tween_smaller)
+.addIndicators({ name: "image smaller" })
+.setPin(".third")
+.addTo(controller);
+
+var tween_smaller2 = TweenMax.to(".swiper-figure .image2", 1, {height:1340});
+	
+var pinSceneIntro = new ScrollMagic.Scene({
+  triggerElement: '.third',
+  triggerHook: 'onEnter',
+  duration: '20%',
+})
+.setTween(tween_smaller2)
+.addIndicators({ name: "image smaller" })
+.addTo(controller);
+
+
+var tween_color_change = TweenMax.to(".swiper-figure .image3", {opacity: 1});
+	
+var pinSceneIntro = new ScrollMagic.Scene({
+  triggerElement: '.two',
+  triggerHook: 1,
+  duration: '100%',
+})
+.setTween(tween_color_change)
+.addIndicators({ name: "color change" })
+.addTo(controller);
+
+
+
+var tween_make_phone = TweenMax.to(".section.retina .retina .images-container .image.image-screen-1", {right: 30, ease: Circ.easeInOut});
+	
+var make_phone = new ScrollMagic.Scene({
+  triggerElement: '.images-container',
+  triggerHook: 1,
+  duration: '100%',
+})
+.setTween(tween_make_phone)
+.addIndicators({ name: "image move" })
+.addTo(controller);

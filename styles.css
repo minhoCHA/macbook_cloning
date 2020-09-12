@@ -165,8 +165,6 @@ h2 {
   .section_intro_img_002 {
     display: inline;
     position: relative;
-    left: 40%;
-    transform: translateX(-50%);
     margin-top: 400px;
     width: 352px;
     height: 232px;
@@ -177,11 +175,13 @@ h2 {
   }
 }
 
+@media (max-width: 767.98px) {
+
+}
+
 @media (max-width: 577px) {
   .section_intro_img_002 {
     position: relative;
-    left: 25%;
-    top: 50%;
   }
 }
 
@@ -349,7 +349,19 @@ h2 {
 .image1 {
   width: 1600px;
   height: 1024px;
+  margin-left: -230px;
 }
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .image1 {
+    margin-left: -50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .image1 {
+    margin-left: 0px;
+  }
+}
+
 .section-wiper .section.one .images.first {
   width: 1600px;
   height: 1024px;
@@ -417,13 +429,7 @@ h2 {
   margin-top: 948px;
 }
 
-.sections-wiper .image2 {
-  width: 2370px;
-  height: 1280px;
-}
-
 .section-wiper .third {
-  margin-top: 700px;
   font-size: 36px;
   line-height: 1.16667;
   font-weight: 600;
@@ -432,10 +438,23 @@ h2 {
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
+.swiper-figure {
+  position: relative;
+  margin-top: -100px
+}
+
+.section-wiper .image2 {
+  margin-top: -1210px;
+  width: 2580px;
+  height: 1450px;
+}
+
 .image3 {
-  width: 1860px;
-  height: 1110px;
-  margin-top: -2510px;
+  width: 2010px;
+  height: 1150px;
+  margin-top: -1460px;
+  margin-left: 280px;
+  opacity: 0;
 }
 
 .section.desc1 {
@@ -468,6 +487,9 @@ h2 {
   position: absolute;
 }
 
+.box-extra {
+  max-width: 900px;
+}
 
 .box-extra .quote-text {
   font-size: 80px;
@@ -523,7 +545,7 @@ h2 {
           transition: all 1s ease-in-out;
 }
 
-/* .section.retina .retina .gallery {
+.section.retina .retina .gallery {
   position: relative;
   margin-top: 200px;
   height: 800px;
@@ -531,8 +553,8 @@ h2 {
   background-color: #f3f3f3;
     --image-gap: 65px;
 }
+
 .section.retina .retina .images-container .image.image-screen-0 {
-  opacity: 0.4;
   position: absolute;
   margin-left: -600px;
   margin-top: 50px;
@@ -544,9 +566,8 @@ h2 {
 }
 
 .section.retina .retina .images-container .image.image-screen-1 {
-  opacity: 0.4;
   position: absolute;
-  margin-left: -530px;
+  margin-left: -590px;
   margin-top: 50px;
   width: 310px;
   height: 642px;
@@ -556,9 +577,8 @@ h2 {
 }
 
 .section.retina .retina .images-container .image.image-screen-2 {
-  opacity: 0.4;
   position: absolute;
-  margin-left: -470px;
+  margin-left: -590px;
   margin-top: 50px;
   width: 310px;
   height: 642px;
@@ -568,9 +588,8 @@ h2 {
 }
 
 .section.retina .retina .images-container .image.image-screen-3 {
-  opacity: 0.4;
   position: absolute;
-  margin-left: -400px;
+  margin-left: -590px;
   margin-top: 50px;
   width: 310px;
   height: 642px;
@@ -582,7 +601,7 @@ h2 {
 .section.retina .retina .images-container .image.image-screen-4 {
   opacity: 1;
   position: absolute;
-  margin-left: -330px;
+  margin-left: -590px;
   margin-top: 50px;
   width: 310px;
   height: 642px;
@@ -604,7 +623,7 @@ h2 {
   letter-spacing: -.05em;
   color: #888;
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-} */
+}
 
 .sections-wiper {
 	width: 100%;
@@ -646,7 +665,12 @@ h2 {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
+}
+
+.section-wiper .image.one {
+  width: 110vw;
+  margin-left: -20px
 }
 
 .scrollmagic-pin-spacer-extra {
@@ -660,3 +684,55 @@ h2 {
   z-index: 999;
   position: absolute;
 }
+
+.start {
+  margin-bottom: -70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.section.retina .retina .images-container .image.image-screen-0 {
+  margin-left: -600px;
+  margin-top: 50px;
+}
+
+.section.retina .retina .images-container .image.image-screen-1 {
+  margin-left: -530px;
+  margin-top: 50px;
+}
+
+.section.retina .retina .images-container .image.image-screen-2 {
+  margin-left: -470px;
+  margin-top: 50px;
+}
+
+.section.retina .retina .images-container .image.image-screen-3 {
+  margin-left: -400px;
+  margin-top: 50px;
+}
+
+.section.retina .retina .images-container .image.image-screen-4 {
+  margin-left: -330px;
+  margin-top: 50px;
+} */
