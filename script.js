@@ -142,10 +142,11 @@ var controller = new ScrollMagic.Controller(); // init controller
 var obj = { curImg: 0 };
   
 // intro image tween
-var main_tween = TweenMax.to(obj, 0.5,
+var main_tween = TweenMax.to(obj, 0.9,
 {
     curImg: images.length - 1,	// animate propery curImg to number of images
     roundProps: "curImg",				// only integers so it can be used as an array index
+    ease: Linear.easeNone,
     onUpdate: function () {
     $(".section_intro_img_001").attr("src", images[obj.curImg]); // set the image source
     }
@@ -156,7 +157,7 @@ var main_tween = TweenMax.to(obj, 0.5,
 var main_scene = new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0.1,
-duration: 800
+duration: 1000
 })
 .setTween(main_tween)
 .addIndicators({ name: "intro image scene" }) // add indicators (requires plugin)
@@ -420,13 +421,90 @@ var pinSceneIntro = new ScrollMagic.Scene({
 
 
 
-var tween_make_phone = TweenMax.to(".section.retina .retina .images-container .image.image-screen-1", {right: 30, ease: Circ.easeInOut});
+var tween_make_phone = TweenMax.to(".section.retina .retina .images-container .image.image-screen-1", {right: 300 });
 	
 var make_phone = new ScrollMagic.Scene({
   triggerElement: '.images-container',
   triggerHook: 1,
-  duration: '100%',
+  duration: '10%',
+  offset: 500,
 })
 .setTween(tween_make_phone)
 .addIndicators({ name: "image move" })
 .addTo(controller);
+
+
+var tween_make_phone2 = TweenMax.to(".section.retina .retina .images-container .image.image-screen-2", {right: 250 });
+	
+var make_phone2 = new ScrollMagic.Scene({
+  triggerElement: '.images-container',
+  triggerHook: 1,
+  duration: '10%',
+  offset: 500,
+})
+.setTween(tween_make_phone2)
+.addIndicators({ name: "image move" })
+.addTo(controller);
+
+
+var tween_make_phone3 = TweenMax.to(".section.retina .retina .images-container .image.image-screen-3", {right: 200 });
+	
+var make_phone3 = new ScrollMagic.Scene({
+  triggerElement: '.images-container',
+  triggerHook: 1,
+  duration: '10%',
+  offset: 500,
+})
+.setTween(tween_make_phone3)
+.addIndicators({ name: "image move" })
+.addTo(controller);
+
+var tween_make_phone4 = TweenMax.to(".section.retina .retina .images-container .image.image-screen-4", {right: 150 });
+	
+var make_phone4 = new ScrollMagic.Scene({
+  triggerElement: '.images-container',
+  triggerHook: 1,
+  duration: '10%',
+  offset: 500,
+})
+.setTween(tween_make_phone4)
+.addIndicators({ name: "image move" })
+.addTo(controller);
+
+
+
+
+var $videoSrc;  
+$('.a-tag').click(function() {
+    $videoSrc = $(this).data( "src" );
+});
+  
+// when the modal is opened autoplay it  
+$('#myModal').on('shown.bs.modal', function (e) {
+    
+$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); })
+
+
+// stop playing the youtube video when I close the modal
+$('#myModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src',$videoSrc); 
+}) 
+
+
+
+// $('.playpause').click(function() {
+//   console.log('a')
+//   var count = 0;
+
+// });
+var clicks = 0;
+var a = function onClick() {
+    clicks += 1;
+    if (clicks % 2 !== 0 || (clicks === 1)) {
+      $('.playpause').css('background-image', 'url(https://www.freeiconspng.com/uploads/video-play-icon-2.gif)');
+    } else {
+      $('.playpause').css('background-image', 'url(https://www.freeiconspng.com/uploads/pause-button-png-11.png)');
+    }
+};
+

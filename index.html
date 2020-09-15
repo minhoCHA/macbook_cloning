@@ -11,13 +11,15 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-        
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <title>Test</title>
 </head>
 
@@ -42,8 +44,9 @@
             <div class="bottom-element d-flex justify-content-center text-align">
                 <div class="col-sm-9 col-md-12 col-lg-11">
                     <p class="paragraph">Designed for those who defy limits and change the world, the new MacBook&nbsp;Pro is by far the most powerful notebook we’ve ever made. With an immersive 16-inch Retina display, superfast processors, next-generation graphics, the largest battery capacity ever in a MacBook&nbsp;Pro, a new Magic&nbsp;Keyboard, and massive storage, it’s the ultimate pro notebook for the ultimate user.</p>
-                    <p><a href="/105/media/us/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/films/product/macbookpro-16-product-tpl-cc-us-2019_1280x720h.mp4" class="a-tag"><span class="icon-copy">Watch the film&nbsp;&nbsp;&nbsp;<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  width="1em" height="1em" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.8,0,0,114.8,0,256s114.8,256,256,256s256-114.8,256-256S397.2,0,256,0z M256,42.7 c118.1,0,213.3,95.3,213.3,213.3S374.1,469.3,256,469.3S42.7,374.1,42.7,256S137.9,42.7,256,42.7z M170.7,109.3v293.3l32-18.7 l192-109.3l32-18.7l-32-18.7L202.7,128L170.7,109.3z M213.3,182.7L340.7,256l-127.3,73.3V182.7H213.3z"/></g></svg></span></a>
-                </div>
+                    <p><a class="a-tag" data-toggle="modal" data-src="https://www.apple.com/105/media/us/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/films/product/macbookpro-16-product-tpl-cc-us-2019_1280x720h.mp4" data-target="#myModal">
+                      <span class="icon-copy">Watch the film&nbsp;&nbsp;&nbsp;<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  width="1em" height="1em" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.8,0,0,114.8,0,256s114.8,256,256,256s256-114.8,256-256S397.2,0,256,0z M256,42.7 c118.1,0,213.3,95.3,213.3,213.3S374.1,469.3,256,469.3S42.7,374.1,42.7,256S137.9,42.7,256,42.7z M170.7,109.3v293.3l32-18.7 l192-109.3l32-18.7l-32-18.7L202.7,128L170.7,109.3z M213.3,182.7L340.7,256l-127.3,73.3V182.7H213.3z"/></g></svg></span></a></p>
+                    </div>
             </div>
         </div>
     </section>
@@ -51,7 +54,7 @@
     <!-- SECTION Desc STARTS -->
     <section class="container section desc">
         <div class="component desc">
-            <div class="contents row justify-content-md-between justify-content-sm-center">
+            <div class="contents row justify-content-lg-between justify-content-md-between justify-content-sm-center">
                 <img class="section_retina_image" src="https://www.apple.com/v/macbook-pro-16/b/images/overview/hero_stats_endframe__fphtv5z0kgmu_medium.jpg">
                 <div class="col-sm-9 col-md-5 col-lg-4 column1">
                   <div class="first feature-1" id="div-feature-row1">
@@ -135,15 +138,15 @@
       </div>
       <div class="start"></div>
       <div class="third d-flex justify-content-center col-xs-4 col-sm-10 col-md-8 col-lg-6">
-        <p>
+        <!-- <p>
           The new MacBook Pro features a stunning <span class="bold">16-inch Retina display</span> — the largest Retina display ever in a Mac notebook. It produces <span class="bold">500 nits of brightness</span> for spectacular highlights and bright whites, while delivering deep blacks thanks to the precise photo alignment of liquid crystal molecules. And the <span class="bold">P3 wide color</span> gamut enables brilliant, true-to-life images and video. So no matter where you are, you’ll see your work in the best possible light.
-        </p>
+        </p> -->
       </div>
     </section>
 
 
 
-    <section class="container section retina">
+    <!-- <section class="container section retina">
       <div class="retina">
         <div class="contents retina">
           <div class="gallery row">
@@ -152,7 +155,7 @@
                 <div class="gallery-item">
                   <p>A mirrorlike enhanced reflector sheet in the backlight reflects over 98 percent of incident light, allowing MacBook&nbsp;Pro to achieve 500 nits of brightness&nbsp;efficiently.</p>
                 </div>
-                <!-- <div class="gallery-item">
+                <div class="gallery-item">
                   <p >An Apple-patented metal layer in the TFT maximizes the transmittance of the pixels, enhancing brightness and color uniformity while reducing pixel cross-talk, which can cause visual&nbsp;artifacts.</p>
                 </div>
                 <div class="gallery-item">
@@ -160,7 +163,7 @@
                 </div>
                 <div class="gallery-item">
                   <p>The narrow-band LED-powered backlight allows MacBook&nbsp;Pro to represent the P3 wide color gamut for brilliant, true-to-life color in photos and&nbsp;videos.</p>
-                </div> -->
+                </div>
               </div>
             </div>
             <div class="images-container">
@@ -173,9 +176,29 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>     
+            <button type="button" class="playpause" onclick="a()"></button>
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item modal_video" src="" id="video" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
     <script src="script.js"></script>
 </body>
 </html>
 
- 
+
+
+
