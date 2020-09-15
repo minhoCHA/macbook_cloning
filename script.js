@@ -170,7 +170,7 @@ main_header.to(".component.main .top-element .box", { scale: 1, autoAlpha: 0 });
 
 // The start and end positions in terms of the page scroll
 const startY = innerHeight / 10;
-const finishDistance = innerHeight / 50;
+const finishDistance = innerHeight / 5;
 
 // Listen to the scroll event
 document.addEventListener("scroll", function () {
@@ -278,8 +278,8 @@ var retina_image1 = TweenLite.to('.section-wiper .image1-cover',  1, {width:2400
 
 // build row scene
 var scene_retina_image1 = new ScrollMagic.Scene({
-  triggerElement: ".section-wiper .image1",
-  duration: 400,
+  triggerElement: ".section-wiper .image1-cover",
+  duration: 1000,
 })
   .setTween(retina_image1)
   .addIndicators({ name: "tween css class" })
